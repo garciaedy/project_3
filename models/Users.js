@@ -10,7 +10,7 @@ const Schema = mongoose.Schema;
 
 const User = new Schema ({
      name: String,
-     category: String,
+     category: Array,
      image: String,
      username: String,
      password: String,

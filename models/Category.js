@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const Category = new Schema({
 name: String,
-publisher: String,
+genre: String,
 year: Number,
-category: String,
+category: Array,
 image: String,
 
 })
