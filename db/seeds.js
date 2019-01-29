@@ -1,0 +1,79 @@
+const User = require("../models/Users");
+const Category = require("../models/Category");
+const mongoose = require("./connections")
+
+const kombat = new Category({
+    name: "Mortal Kombat 11",
+    genre: "fighting",
+    year: 2019,
+    category: "game",
+    image: "https://mortalkombat.com/preorder?gclid=Cj0KCQiAkMDiBRDNARIsACKP1FEv3kovPJTL5q19Gmch_opatqamQk0iB1QBIa6c7R61e24WIIyHkBAaAsmNEALw_wcB"
+
+}),
+const daball = new Category({
+    name: "dragon ball super: broly",
+    genre: "amime",
+    year: 2018,
+    category: "movie",
+    image: "https://www.youtube.com/watch?v=FHgm89hKpXU"
+
+}),
+const daweb = new Category({
+    name: "spider-man: into the spider-verse",
+    genre: "anime",
+    year: 2018,
+    category: "movie",
+    image: "https://www.youtube.com/watch?v=FU0i0eg6qak"
+
+}),
+const sun = new Category({
+    name: "The Sun Dog",
+    genre: "Horror",
+    year: 2017,
+    category: "book",
+    image: "https://www.barnesandnoble.com/w/the-sun-dog-stephen-king/1013077297?ean=9781982115425#/"
+
+}),
+const vol1 = new Category({
+    name: "For the Kid I Saw in My Dreams, Vol. 1",
+    genre: "fantacy",
+    year: 2018,
+    category: "book",
+    image: "https://www.barnesandnoble.com/w/for-the-kid-i-saw-in-my-dreams-vol-1-kei-sanbe/1129915926?ean=9781975328863#/"
+
+}),
+const smash = new Category({
+    name: "Super Smash Bros. Ultimate",
+    genre: "fighting",
+    year: 2018,
+    category: "game",
+    image: "https://www.smashbros.com/en_US/"
+
+}),
+const edy = new User ({
+    name: "Edy",
+    category: ["movie","book","game"],
+    image: "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjJooaE7JPgAhVGNd8KHSNZADcQjRx6BAgBEAU&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D2ryxpNewOHg&psig=AOvVaw0YCygJEz8pDnIWJ1TYScfl&ust=1548880603992617",
+    username: 'edygarcia',
+    password: 'project3' ,
+    entertain:[daball,sun, smash]
+}),
+const aaron = new User ({
+    name: 'Aaron',
+    category: ["movie","book","game"],
+    image: "https://www.google.com/search?q=react.js+express&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjy5J6B7JPgAhUtmeAKHR36AZsQ_AUIECgD&biw=1195&bih=722#imgrc=AzscrIxgOWCrlM:",
+    username: 'garciaedy',
+    password: '3project',
+    entertain:[ kombat, daweb, vol1]
+
+})
+
+
+
+User.remove({})
+    .then(() => Category.remove({}))
+    .then(() => Category.insertMany([mars, tesla]))
+    .then(() => edy.save())
+    .then(() => aaron.save())
+    .then(() => console.log('Successful Save'))
+    .then(() => mongoose.connection.close())
