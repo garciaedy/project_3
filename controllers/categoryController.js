@@ -26,12 +26,23 @@ User.findById(userId)
            res.send(updateCategory)
        })
    },
-   
-
-
-
-
-
+   delete: (req,res) =>{
+       const categoriesId = req.params.categoriesId;
+       Category.findByIdAndRemove(categoriesId)
+       .then(()=>{
+           res.send(200)
+       })
+   },
+create: (req, res) =>{
+    const userId = req.params.userId;
+   User.findById(userId).then(user =>{
+        Category.create(req.body).then(newCategory =>{
+            user.categories.push(newCategory);
+            user.save();
+            res.send(newCategory)
+        });
+    });
+}
 
 }
 
