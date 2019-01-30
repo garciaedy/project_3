@@ -27,17 +27,12 @@ delete: (req, res) =>{
         res.send(updateUser)
     })
 },
-
-
-
-
-
-
-
-
-
+create:(req, res) =>{
+    User.create(req.body)
+    .then((user) =>{
+        res.send(user)
+    })
+ }
 }
-
-
 
 module.exports = userController
