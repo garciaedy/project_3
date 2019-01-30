@@ -1,5 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const userController = require('../controllers/userController')
+const categoryController = require('../controllers/categoryController')
+
 // const userController = require('../controllers/userController')
 // const ideasController = require('../controllers/ideasController')
 
