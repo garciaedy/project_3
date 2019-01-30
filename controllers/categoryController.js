@@ -11,15 +11,16 @@ User.findById(userId)
 })
    } ,
    show: (req, res) =>{
-       const categoriesId = req.params.categoriesId;
-       User.findById(userId)
+       const categoriesId = req.params.categoryId;
+       Category.findById(categoriesId)
        .populate('comments')
        .then(categories =>{
            console.log(categories)
+           res.send(trips)
        })
    },
    update: (req,res) =>{
-       const categoriesId = req.params.categoriesId;
+       const categoriesId = req.params.categoryId;
        Category.findByIdAndUpdate(categoriesId,req.body, {new: true})
        .then((updateCategory) =>{
            updateCategory.save()
@@ -27,7 +28,7 @@ User.findById(userId)
        })
    },
    delete: (req,res) =>{
-       const categoriesId = req.params.categoriesId;
+       const categoriesId = req.params.categoryId;
        Category.findByIdAndRemove(categoriesId)
        .then(()=>{
            res.send(200)
