@@ -21,11 +21,10 @@ update: (req, res) =>{
     })
 },
 delete: (req, res) =>{
-    User.findByIdAndUpdate(req.params.userId, req.body)
-    .then((updateUser) =>{
-        updateUser.save()
-        res.send(updateUser)
-    })
+   User.findByIdAndDelete(req.params.userId)
+   .then(()=>{
+       res.send(200)
+   })
 },
 create:(req, res) =>{
     User.create(req.body)
