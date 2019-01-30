@@ -10,7 +10,23 @@ User.findById(userId)
     res.send(user.trips)
 })
    } ,
-   s
+   show: (req, res) =>{
+       const categoriesId = req.params.categoriesId;
+       User.findById(userId)
+       .populate('comments')
+       .then(categories =>{
+           console.log(categories)
+       })
+   },
+   update: (req,res) =>{
+       const categoriesId = req.params.categoriesId;
+       Category.findByIdAndUpdate(categoriesId,req.body, {new: true})
+       .then((updateCategory) =>{
+           updateCategory.save()
+           res.send(updateCategory)
+       })
+   },
+   
 
 
 
