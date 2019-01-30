@@ -7,6 +7,26 @@ index: (req, res) =>{
 res.send(users)
     })
 },
+show: (req, res) =>{
+    User.findById(req.params.userId).populate('categories')
+    .then((user) =>{
+        res.send(user)
+    })
+},
+update: (req, res) =>{
+    User.findByIdAndUpdate(req.params.userId, req.body)
+    .then((updateUser) =>{
+        updateUser.save()
+        res.send(updateUser)
+    })
+},
+delete: (req, res) =>{
+    User.findByIdAndUpdate(req.params.userId, req.body)
+    .then((updateUser) =>{
+        updateUser.save()
+        res.send(updateUser)
+    })
+},
 
 
 
