@@ -7,7 +7,7 @@ const userId = req.params.userId;
 User.findById(userId)
 .populate('categories')
 .then(user =>{
-    res.send(user.trips)
+    res.send(user.entertain)
 })
    } ,
    show: (req, res) =>{
@@ -16,7 +16,7 @@ User.findById(userId)
        .populate('comments')
        .then(categories =>{
            console.log(categories)
-           res.send(trips)
+           res.send(categories)
        })
    },
    update: (req,res) =>{

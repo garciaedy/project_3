@@ -25,7 +25,7 @@ a{
 export default class NavBar extends Component {
   render() {
     return (
-      <NavBarStyles id="nav-container" class="some-class"> 
+      <NavBarStyles id="nav-container" className="some-class"> 
       <Link to="/" >Main</Link>
       <div className="right">
 <Link to="/login" > Sing Up</Link>

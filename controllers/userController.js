@@ -3,7 +3,8 @@ const Category = require("../models/Category")
 
 const userController = {
 index: (req, res) =>{
-    User.find({}).then((users) =>{
+    User.find({})
+    .then((users) =>{
 res.send(users)
     })
 },
@@ -15,9 +16,9 @@ show: (req, res) =>{
 },
 update: (req, res) =>{
     User.findByIdAndUpdate(req.params.userId, req.body)
-    .then((updateUser) =>{
-        updateUser.save()
-        res.send(updateUser)
+    .then((updatedUser) =>{
+        updatedUser.save()
+        res.send(updatedUser)
     })
 },
 delete: (req, res) =>{

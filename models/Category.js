@@ -12,4 +12,4 @@ image: String,
 
 
 
-module.exports = mongoose.model("Category", Category);
+module.exports = mongoose.model('Category', Category);

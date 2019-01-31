@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import UserPage from './components/UserPage'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import HomePage from './components/HomePage'
 import CategoryPage from './components/CategoryPage'
 import LogInPage from './components/LogInPage'
 import { createGlobalStyle } from 'styled-components'
 
 import './App.css';
-import CategoryPage from './components/CategoryPage';
+
 
 const Global = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
@@ -35,7 +35,8 @@ class App extends Component {
           <Route path="/" component={HomePage}/>
 
         </Switch>
-       
+   
+
       </div>
     </Router>
     );
