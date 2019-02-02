@@ -7,7 +7,7 @@ import CategoryPage from './components/CategoryPage'
 import LogInPage from './components/LogInPage'
 import { createGlobalStyle } from 'styled-components'
 
-import './App.css';
+// import './App.css';
 
 
 const Global = createGlobalStyle`
@@ -30,8 +30,8 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path="/login" component={LogInPage}/>
-          <Route exact path="/user/:userId" component={CategoryPage}/>
-          <Route exact path ="/user" component={UserPage}/>
+          <Route exact path="/users/:userId" component={CategoryPage}/>
+          <Route exact path ="/users" component={UserPage}/>
           <Route path="/" component={HomePage}/>
 
         </Switch>

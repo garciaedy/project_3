@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import sty
 
-export default class UserPage extends Component {
+
+
+export default class newCatForm extends Component {
   render() {
     return (
       <div>

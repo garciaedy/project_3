@@ -72,7 +72,7 @@ const aaron = new User ({
 
 User.remove({})
     .then(() => Category.remove({}))
-    .then(() => Category.insertMany([kombat, dBall, daWeb, sun, vol1, smash, edy, aaron]))
+    .then(() => Category.insertMany([kombat, dBall, daWeb, sun, vol1, smash]))
     .then(() => edy.save())
     .then(() => aaron.save())
     .then(() => console.log('Successful Save'))

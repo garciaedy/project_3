@@ -1,5 +1,4 @@
 const User = require('../models/User')
-const Category = require("../models/Category")
 
 const userController = {
 index: (req, res) =>{
@@ -15,6 +14,7 @@ show: (req, res) =>{
     })
 },
 update: (req, res) =>{
+    
     User.findByIdAndUpdate(req.params.userId, req.body)
     .then((updatedUser) =>{
         updatedUser.save()
