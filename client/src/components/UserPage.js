@@ -2,10 +2,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+// import styled from "styled-components";
 
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, Button } from 'reactstrap';
+import { Card,CardText, CardBody,
+  CardTitle,  } from 'reactstrap';
 
 
 
