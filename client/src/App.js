@@ -3,11 +3,10 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import UserPage from './components/UserPage'
 import HomePage from './components/HomePage'
-import CategoryPage from './components/CategoryPage'
-import LogInPage from './components/LogInPage'
+import CatList from './components/CatList'
+import SingleUser from './components/SingleUser'
+import SingleCat from './components/SingleCat'
 import { createGlobalStyle } from 'styled-components'
-
-// import './App.css';
 
 
 const Global = createGlobalStyle`
@@ -20,27 +19,35 @@ const Global = createGlobalStyle`
     background: white;
   }
 `
-
 class App extends Component {
   render() {
     return (
+      <div className="App">
       <Router>
-      <div>
-        <Global />
-        <NavBar />
-        <Switch>
-          <Route exact path="/login" component={LogInPage}/>
-          <Route exact path="/users/:userId" component={CategoryPage}/>
-          <Route exact path ="/users" component={UserPage}/>
-          <Route path="/" component={HomePage}/>
-
-        </Switch>
-   
-
-      </div>
-    </Router>
-    );
-  }
+        <div>
+          <Global />
+          <NavBar />
+          <Switch>
+            <Route exact path="/users" component={UserPage} />
+            <Route
+              exact
+              path="/users/:userId/categories"
+              component={CatList}
+            />
+            <Route exact path="/users/:userId" component={SingleUser} />
+            <Route
+              exact
+              path="/users/:userId/categories/:categoriesId"
+              component={SingleCat}
+            />
+            <Route path="/" component={HomePage} />
+          </Switch>
+        </div>
+      </Router>
+    </div>
+  );
 }
+}
+
 
 export default App;

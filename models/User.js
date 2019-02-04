@@ -2,10 +2,10 @@ const mongoose = require('../db/connections')
 const Schema = mongoose.Schema
 
 const User = new Schema({
-    image: String,
     username: String,
     password: String,
-    entertainment: [
+    image: String,
+   categories: [
         {
             type: Schema.Types.ObjectId,
             ref: 'Category'

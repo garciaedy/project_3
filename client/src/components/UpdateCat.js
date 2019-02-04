@@ -25,7 +25,7 @@ handleChange = e => {
   handleUpdate = categoriesId => {
     const updatedEntertain = this.state.entertainment;
     const userId = this.props.match.params.userId;
-    axios.patch(`/api/user/${userId}/categories/${categoriesId}`, updatedEntertain)
+    axios.patch(`/api/users/${userId}/categories/${categoriesId}`, updatedEntertain)
     .then(()=>{
       console.log("updated Cat")
     })
@@ -35,8 +35,47 @@ handleChange = e => {
   render() {
     return (
       <div>
+      <form onSubmit={() => this.handleUpdate(this.state.entertainment._id)}>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.entertainment.name}
+            type="text"
+            name="name"
+          />
+        </div>
+        <div>
+          <label htmlFor="image">Image</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.entertainment.image}
+            type="text"
+            name="image"
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.entertainment.password}
+            type="text"
+            name="password"
+          />
+        </div>
+        <div>
+          <label htmlFor="year">The Year it Released</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.entertainment.year}
+            type="text"
+            name="year"
+          />
+        </div>
         
-      </div>
-    )
-  }
+        <Button className='#880e4f pink darken-4' type="submit">Update Game</Button>
+      </form>
+    </div>
+  );
+}
 }

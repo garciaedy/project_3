@@ -1,37 +1,36 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import { Navbar, NavItem, Icon } from "react-materialize";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-const NavBarStyles = styled.div`
-display: flex;
-justify-content: space-between;
-background: #2d9b90;
-height: 60px;
-
-a{
-    text-decoration: none;
-    padding-left: 10px;
-    color: white;
-    &:active {
-        color: red;
-      }
-}
-.right {
-    width: 15vw;
-    display: flex;
-    justify-content: space-around;
-  }
+const NavBarItem = styled.div`
+  display: flex;
+  align-items: flex-end;
 `;
+
 export default class NavBar extends Component {
   render() {
     return (
-      <NavBarStyles id="nav-container" className="some-class"> 
-      <Link to="/" >Main</Link>
-      <div className="right">
-<Link to="/login" > Sing Up</Link>
-<Link to="/user" > Forum </Link>
+      <div>
+        <Navbar className=" #78909c blue-grey lighten-1" right>
+          <NavItem brand="GameLiker" className="brand-logo center ">
+            Gen-Game
+          </NavItem>
+          <NavBarItem>
+            <Link to="/">
+              <NavItem waves="light">
+                <Icon left>home</Icon>Home
+              </NavItem>
+            </Link>
+            <Link to="/users">
+              <NavItem waves="light">
+                <Icon left>supervisor_account</Icon>Users
+              </NavItem>
+            </Link>
+          </NavBarItem>
+        </Navbar>
       </div>
-      </NavBarStyles>
-    )
+    );
   }
 }
+

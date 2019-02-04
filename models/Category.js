@@ -3,13 +3,12 @@ const Schema = mongoose.Schema;
 
 const Category = new Schema({
     name: String,
-    genre: String,
-    year: Number,
-    category: Array,
-    image: String,
-
-})
-
+    description: String,
+  
+ 
+ })
+ 
+ 
 
 
 module.exports = mongoose.model('Category', Category);

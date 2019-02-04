@@ -8,7 +8,7 @@ res.send(users)
     })
 },
 show: (req, res) =>{
-    User.findById(req.params.userId).populate('categories')
+    User.findById(req.params.userId).populate('entertainment')
     .then((user) =>{
         res.send(user)
     })
@@ -29,8 +29,8 @@ delete: (req, res) =>{
 },
 create:(req, res) =>{
     User.create(req.body)
-    .then((user) =>{
-        res.send(user)
+    .then((NewUser) =>{
+        res.send(NewUser)
     })
  }
 }
