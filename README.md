@@ -25,10 +25,10 @@ A MERN stact
 - have connect the routes correctly
 
 #ERD
-![ERD](/images/ERD.PNG)
+![ERD](/images/IMG_0874.jpg)
 
 #Wireframe
-![Wireframe](images/Wireframe_copy.png)
+![Wireframe](images/IMG_0875.jpg)
 
 
 
