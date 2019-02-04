@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const FormStyles = styled.div`
   
   width: 500px;
-  font-size: 30px;
+  font-size: 30px
   `
 
 export default class NewUserForm extends Component {
@@ -64,6 +64,7 @@ export default class NewUserForm extends Component {
           </div>
           <button className = "buttonL" type="submit">Create User</button>
           </FormGroup>
+          
         </Form>
       
                 

@@ -72,7 +72,7 @@ handleDelete = categoryId =>{
     axios.delete(`/api/categories/${categoryId}`).then(() =>{
         const newCategories = [...this.state.categories]
         const filtered = newCategories.filter(category =>{
-            return category._id !==categoryId
+            return category._id !== categoryId
         })
         this.setState({categories: filtered})
     })
@@ -127,6 +127,15 @@ handleUpdate = (categoryId) =>{
             }
             return (
               <ListStyles>
+              <input
+              onChange={this.handleChange}
+              value={this.state.user.image}
+              type="text"
+              name="image"
+              
+            />
+            <img src={this.state.categories.image} alt="mage" />
+        
                 <input 
                    onBlur={() => this.handleUpdate(category._id)}
                   onChange={(event) => this.handleChange(event, category._id)} 
