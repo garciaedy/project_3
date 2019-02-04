@@ -12,10 +12,11 @@ const ListStyles = styled.div`
   background: white;
   margin: 10px 0;
   button {
-    width: 20px;
+    width: 40px;
     right: 5px;
     top: 10px;
-    background-color: black;
+    font: 30px;
+    background-color: ;
     border-radius: 5px;
     position: absolute;
     border: none;
@@ -112,16 +113,16 @@ handleUpdate = (categoryId) =>{
   render() {
     return (
         <div className ="background4">
-        <h1>Welcome to your List Page {this.state.user.username}</h1>
+        <h1>Welcome User {this.state.user.username}</h1>
        
         <button className ='button' onClick={this.handleCreateNewCategory}>
-          Create List
+          Create Item
           </button>
          
           
         <listStylesC>
           {this.state.categories.map(category => {
-            const deleteCategory = () => {
+              const deleteCategory = () => {
               return this.handleDelete(category._id)
             }
             return (
@@ -140,7 +141,7 @@ handleUpdate = (categoryId) =>{
                   name="description" 
                   value={category.description} 
                 />
-                <button onClick={deleteCategory}></button>
+                <button onClick={deleteCategory}>delete</button>
                 </ListStyles>
             )
           })}

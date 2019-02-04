@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import {  Form, FormGroup, Label, Input,  } from 'reactstrap';
 import styled from 'styled-components'
 
 const FormStyles = styled.div`
   
   width: 500px;
+  font-size: 30px;
   `
 
 export default class NewUserForm extends Component {
@@ -70,3 +71,4 @@ export default class NewUserForm extends Component {
     )
   }
 }
+ 

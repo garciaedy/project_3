@@ -6,8 +6,9 @@ const NavBarStyles = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: grey;
+  background: TEAL;
   height: 70px;
+  font-size: 25px
   
   a {
     text-decoration: none;

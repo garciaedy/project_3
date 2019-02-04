@@ -28,7 +28,7 @@ A MERN stact
 ![ERD](/images/ERD.PNG)
 
 #Wireframe
-![Wireframe](images/Wireframe.png)
+![Wireframe](images/Wireframe_copy.png)
 
 
 

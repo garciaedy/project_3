@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import NewUserForm from './NewUserForm';
+import NewUserForm from './NewUserForm'
 
 
 

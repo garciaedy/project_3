@@ -5,7 +5,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-      <h1>Category Tracker</h1>
+      <h1>Library Tracker</h1>
 
       </div>
     );
