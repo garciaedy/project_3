@@ -20,7 +20,7 @@ export default class UserPage extends Component {
       this.setState({users: res.data});
     });
 
-    };
+    }
     componentDidMount(){
       this.getAllUsers()
     }

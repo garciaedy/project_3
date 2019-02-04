@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import NewUserForm from './NewUserForm';
 
 const ListStyles = styled.div`
   display: flex;
@@ -156,7 +155,6 @@ handleUpdate = (categoryId) =>{
             )
           })}
           </listStylesC>
-          <NewUserForm props={this.props} />
       </div>
     )
   }

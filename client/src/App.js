@@ -23,7 +23,7 @@ const Global = createGlobalStyle`
 class App extends Component {
   render() {
     return (
-      <div className="App">
+     
       <Router>
         <div>
           <Global />
@@ -37,7 +37,7 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
-    </div>
+
   );
 }
 }

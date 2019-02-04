@@ -33,7 +33,7 @@ class NavBar extends Component {
                 <div className="right">
                     <Link to="/login">Sign Up</Link>
 
-                    <Link to="/user">Users</Link>
+                    <Link to="/users">Users</Link>
                 </div>
 
             </NavBarStyles>
