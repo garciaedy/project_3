@@ -1,36 +1,43 @@
-import React, { Component } from "react";
-import { Navbar, NavItem, Icon } from "react-materialize";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
-const NavBarItem = styled.div`
+const NavBarStyles = styled.div`
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  background: grey;
+  height: 70px;
+  
+  a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: white;
+    &:active {
+      color: red;
+    }
+  }
+  .right {
+    width: 15vw;
+    display: flex;
+    justify-content: space-around;
+  }
 `;
 
-export default class NavBar extends Component {
-  render() {
-    return (
-      <div>
-        <Navbar className=" #78909c blue-grey lighten-1" right>
-          <NavItem brand="GameLiker" className="brand-logo center ">
-            Gen-Game
-          </NavItem>
-          <NavBarItem>
-            <Link to="/">
-              <NavItem waves="light">
-                <Icon left>home</Icon>Home
-              </NavItem>
-            </Link>
-            <Link to="/users">
-              <NavItem waves="light">
-                <Icon left>supervisor_account</Icon>Users
-              </NavItem>
-            </Link>
-          </NavBarItem>
-        </Navbar>
-      </div>
-    );
-  }
+class NavBar extends Component {
+    render() {
+        return (
+            <NavBarStyles id="nav-container" class="some-class">
+                <Link to="/">Home</Link>
+                <div className="right">
+                    <Link to="/login">Sign Up</Link>
+
+                    <Link to="/user">Users</Link>
+                </div>
+
+            </NavBarStyles>
+        );
+    }
 }
 
+export default NavBar;

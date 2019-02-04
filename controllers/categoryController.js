@@ -22,7 +22,7 @@ const categoryController = {
     },
     delete: (req, res) => {
         const categoryId = req.params.categoryId;
-        Category.findByIdAndRemove(categoryId)
+        Category.findByIdAndDelete(categoryId)
             .then(() => {
                 res.send(200)
             })

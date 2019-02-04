@@ -3,9 +3,10 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import UserPage from './components/UserPage'
 import HomePage from './components/HomePage'
-import CatList from './components/CatList'
-import SingleUser from './components/SingleUser'
-import SingleCat from './components/SingleCat'
+import Login from './components/Login'
+import Category from './components/Category'
+
+
 import { createGlobalStyle } from 'styled-components'
 
 
@@ -28,19 +29,11 @@ class App extends Component {
           <Global />
           <NavBar />
           <Switch>
-            <Route exact path="/users" component={UserPage} />
-            <Route
-              exact
-              path="/users/:userId/categories"
-              component={CatList}
-            />
-            <Route exact path="/users/:userId" component={SingleUser} />
-            <Route
-              exact
-              path="/users/:userId/categories/:categoriesId"
-              component={SingleCat}
-            />
-            <Route path="/" component={HomePage} />
+          <Route exact path= "/login" component ={Login}/>
+          <Route exact path= "/users"  component ={UserPage}/>
+          <Route exact path= "/users/:userId/categories" component ={Category}/>
+        
+          <Route path= "/" component ={HomePage}/>
           </Switch>
         </div>
       </Router>
