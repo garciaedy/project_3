@@ -6,45 +6,46 @@ const categoryController = {
     index: (req, res) => {
         const userId = req.params.userId;
         User.findById(userId)
-            .populate('entertainment')
+            .populate('categories')
             .then(user => {
-                res.send(user.entertainment)
+                res.send(user.categories)
             })                                          
     },
 
     show: (req, res) => {
-        const categoriesId = req.params.categoriesId;
-        Category.findById(categoriesId)
-            .then(entertain => {
+        const categoryId = req.params.categoryId;
+        Category.findById(categoryId)
+            .then(category => {
                 // console.log(categories)
-                res.send(entertain)
-            })
-    },
-    update: (req, res) => {
-        const categoriesId = req.params.categoriesId;
-       Category.findByIdAndUpdate(categoriesId, req.body, { new: true })
-            .then((updatedEntertain) => {
-                updatedEntertain.save()
-                res.send(updatedEntertain)
+                res.send(category)
             })
     },
     delete: (req, res) => {
-        const categoriesId = req.params.categoriesId;
-        Category.findByIdAndRemove(categoriesId)
+        const categoryId = req.params.categoryId;
+        Category.findByIdAndRemove(categoryId)
             .then(() => {
                 res.send(200)
             })
     },
 
+    update: (req, res) => {
+        const categoryId = req.params.categoryId;
+       Category.findByIdAndUpdate(categoryId, req.body, { new: true })
+            .then((updatedCategory) => {
+                updatedCategory.save()
+                res.send(updatedCategory)
+            })
+        },
+   
     create: (req, res) => {
-        const userId = req.params.userId;
-        User.findById(userId).then((user) => {
-            Category.create(req.body).then((newCat) => {
-                user.entertainment.push(newCat);
+        const categoryId = req.params.userId;
+        User.findById(categoryId).then((user) => {
+            Category.create(req.body).then((newCategory) => {
+                user.categories.push(newCategory);
                 user.save();
-                res.send(newCat)
-            });
-        });
+                res.send(newCategory)
+            })
+        })
     }
 
 }
