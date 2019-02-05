@@ -9,7 +9,7 @@ const FormStyles = styled.div`
   font-size: 30px;
   `
 
-export default class NewUserForm extends Component {
+export default class NUserForm extends Component {
   state ={
    
     username: "",

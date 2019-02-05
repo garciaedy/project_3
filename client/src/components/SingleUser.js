@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import NewUserForm from './NewUserForm'
+
 
 
 export default class SingleCat extends Component {
@@ -21,13 +21,9 @@ export default class SingleCat extends Component {
   render() {
     return (
       <div>
-      <div>
-      <NewUserForm {...this.props}/>
-      </div>
-      <div>
        {this.state.user.username}
-      
-      </div>
+
+
       </div>
     );
   }

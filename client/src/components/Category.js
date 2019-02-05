@@ -79,6 +79,9 @@ handleDelete = categoryId =>{
 }
 handleChange = (event, categoryId) => {  
 this.setState({ category: event.target.value})}
+
+// did not delete this trying to understand why is not working 
+
     // const {value, name} = event.target
 //     const newCategories = [...this.state.categories]
 //     const mapCategory = newCategories.map(category =>{
