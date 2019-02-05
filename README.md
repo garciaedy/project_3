@@ -7,7 +7,8 @@ A MERN stact
 
 # Trello 
 - https://trello.com/b/Lmxf9Vef/project-3
-
+#heroku 
+https://sheltered-sierra-26653.herokuapp.com/
 #Technologies Used
 - React
 - MongoDB
@@ -25,10 +26,10 @@ A MERN stact
 - have connect the routes correctly
 
 #ERD
-![ERD](/images/IMG_0874.png)
+![ERD](/IMG_0874.png)
 
 #Wireframe
-![Wireframe](images/IMG_0875.png)
+![Wireframe](/IMG_0875.png)
 
 
 
