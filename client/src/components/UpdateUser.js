@@ -26,7 +26,7 @@ export default class UpdateUser extends Component {
   handleUpdate = userId => {
     const updatedUser = this.state.user
     axios.patch(`/api/users/${userId}`, updatedUser).then(() => {
-      console.log("Updated User");
+     console.log("Updated User");
     });
   };
 
@@ -46,7 +46,6 @@ export default class UpdateUser extends Component {
           <div>
             <label htmlFor="image">Image</label>
             <input
-         
               onChange={this.handleChange}
               value={this.state.user.image}
               type="text"
@@ -54,12 +53,12 @@ export default class UpdateUser extends Component {
             />
           </div>
           <div>
-            <label htmlFor="libabry">Library Type</label>
+            <label htmlFor="category">Library Type</label>
             <input
               onChange={this.handleChange}
-              value={this.state.user.console}
+              value={this.state.user.category}
               type="text"
-              name="console"
+              name="category"
             />
           </div>
           <Button className='#1976d2 blue darken-2' type="submit">Update User</Button>

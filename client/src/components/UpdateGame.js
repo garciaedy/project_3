@@ -19,7 +19,7 @@ export default class UpdateGame extends Component {
   }
 
   handleChange = e => {
-    console.log("name", e.target.name);
+ console.log("name", e.target.name);
     console.log("value", e.target.value);
     const updatedGame = {...this.state.games};
     updatedGame[e.target.name] = e.target.value;
@@ -52,7 +52,6 @@ export default class UpdateGame extends Component {
           <div>
             <label htmlFor="image">Image</label>
             <input
-            
               onChange={this.handleChange}
               value={this.state.games.image}
               type="text"
@@ -69,7 +68,7 @@ export default class UpdateGame extends Component {
             />
           </div>
           <div>
-            <label htmlFor="year">Year it Released</label>
+            <label htmlFor="year">The Year it Released</label>
             <input
               onChange={this.handleChange}
               value={this.state.games.year}
@@ -77,16 +76,11 @@ export default class UpdateGame extends Component {
               name="year"
             />
           </div>
-           <label htmlFor="description">Description</label>
-            <input
-              onChange={this.handleChange}
-              value={this.state.games.description}
-              type="text"
-              name="description"
-            />
+          
           <Button className='#880e4f pink darken-4' type="submit">Update Library</Button>
         </form>
       </div>
     );
   }
 }
+

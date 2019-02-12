@@ -13,6 +13,7 @@ const PageStyle = styled.div`
   align-items: center;
   align-content: center;
   flex-direction: column;
+  background: url("https://static.makeuseof.com/wp-content/uploads/2016/04/rainmeter_wallpaper.png");
   border-radius: 100px;
   margin: 0px 80px 0px 80px;
 `;
@@ -58,7 +59,7 @@ export default class UserPage extends Component {
   render() {
     return (
       <PageStyle>
-        <h1> welcome to User's Foroum </h1>
+        <h1> welcome to User's Forum </h1>
         <h3>All Users:</h3>
         <ButtonStyle>
           {this.state.users.map(user => (
@@ -68,7 +69,7 @@ export default class UserPage extends Component {
                   className="#42a5f5 blue lighten-1 z-depth-5"
                   waves="light"
                 >
-
+                  <Icon left>touch_app</Icon>
                   {user.name}
                 </Button>
               </Link>

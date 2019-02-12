@@ -25,7 +25,7 @@ export default class VideoGameList extends Component {
   componentDidMount() {
     const userId = this.props.match.params.userId;
     axios.get(`/api/users/${userId}/videogames`).then(res => {
-      // console.log(res.data);
+      // category.log(res.data);
       this.setState({
         games: res.data
       });
@@ -49,7 +49,7 @@ export default class VideoGameList extends Component {
             header={
               <CardTitle
                 className="red-text text-darken-2"
-    
+                image="https://media0.giphy.com/media/No3GPv5mjkskE/giphy.gif?cid=3640f6095bf32687467365782ed14e85"
               >
                 {" "}
                 <Link
@@ -67,7 +67,7 @@ export default class VideoGameList extends Component {
                 className="#ef5350 red lighten-1"
                 onClick={() => this.handleDelete(game._id)}
               >
-                Delete this Library
+                Delete this game
               </Button>
             ]}
           />
@@ -77,7 +77,7 @@ export default class VideoGameList extends Component {
 
     return (
       <div>
-        <h1>My User Libabry </h1>
+        <h1>My Video Game List </h1>
         <br />
         <CardsStyling>{gameDetails}</CardsStyling>
       </div>

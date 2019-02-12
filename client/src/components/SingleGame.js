@@ -79,24 +79,20 @@ export default class SingleGame extends Component {
           <Leteter>
             <h3> {this.state.games.name}</h3>
           </Leteter>
-          <img src={this.state.games.image} alt="libraryPicture" />
+          <img src={this.state.games.image} alt="gamePicture" />
         </PageStyle>
         <BothStuff>
           <Back>
-            <h3>Library Category</h3>
+            <h3>Library:</h3>
             <h5> {this.state.games.category}</h5>
 
             <h3>
-              Released  <br />
+             year released: <br />
             </h3>
             <h5>{this.state.games.year}</h5>
-              <h3>
-              Item Description: <br />
-            </h3>
-            <h5>{this.state.games.description}</h5>
           </Back>
           <Form>
-            <h3>Update Lybrary:</h3>
+            <h3>Update Library:</h3>
             <UpdateGame {...this.props} />
           </Form>
         </BothStuff>

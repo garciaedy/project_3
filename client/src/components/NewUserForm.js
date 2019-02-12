@@ -8,7 +8,7 @@ export default class NewUserForm extends Component {
     newUser: {
       name: "",
       image: "",
-      library: ""
+      category: ""
     }
   };
 
@@ -24,7 +24,7 @@ export default class NewUserForm extends Component {
     event.preventDefault();
     const payload = {
       name: this.state.newUser.name,
-      console: this.state.newUser.console,
+      category: this.state.newUser.category,
       image: this.state.newUser.image
     };
     axios.post("/api/users", payload).then(res => {
@@ -51,19 +51,18 @@ export default class NewUserForm extends Component {
             <label htmlFor="image">Image</label>
             <input
               onChange={this.handleChange}
-              
               value={this.state.newUser.image}
               type="text"
               name="image"
             />
           </div>
           <div>
-            <label htmlFor="library">Library</label>
+            <label htmlFor="category">Library</label>
             <input
               onChange={this.handleChange}
-              value={this.state.newUser.console}
+              value={this.state.newUser.category}
               type="text"
-              name="console"
+              name="category"
             />
           </div>
           <Button class="btn-floating btn-large waves-effect waves-light red" type="submit">Create User</Button>

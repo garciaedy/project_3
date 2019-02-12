@@ -53,13 +53,14 @@ const smash = new VideoGame({
 })
 const edy = new User({
   name: "Edy",
-  console: "ps4",
+  category: "ps4",
   image: "https://images.unsplash.com/photo-1542838687-f960f044ef1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60",
   games: [dBall,sun, smash]
 });
 
 const aaron = new User({
   name: "Aaron",
+  category: "books",
 image: "https://images.unsplash.com/photo-1549482287-9237fdb5bec0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60",
   games: [ kombat, daWeb, vol1]
 });

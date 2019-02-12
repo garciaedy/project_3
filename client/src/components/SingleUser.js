@@ -14,6 +14,7 @@ const PageStyle = styled.div`
   align-items: center;
   align-content: center;
   flex-direction: column;
+  background: url("http://static.tumblr.com/e60b248ae9bd68cb888034e7bb7d3b2f/o0cmdl5/qf7ndgrdb/tumblr_static_7yzz7mm0sz4sk4swok00cko4w.png");
   border-radius: 12px;
   padding: 12px;
   margin: 0px 90px;
@@ -34,11 +35,11 @@ export default class SingleUser extends Component {
     return (
       <div>
         <PageStyle>
-          <h1>Welcome to User {this.state.user.name}</h1>
+          <h1>Welcome to {this.state.user.name}'s profile page</h1>
           <img src={this.state.user.image} alt="profile pic" />
           <h3>
-            Library Type <br />
-            {this.state.user.console}
+            Library Type: <br />
+            {this.state.user.category}
           </h3>
           <hr />
           <h3>Update User</h3>

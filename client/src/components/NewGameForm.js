@@ -13,8 +13,7 @@ export default class NewGameForm extends Component {
       name: "",
       image: "",
       category: "",
-      year: "",
-      description: ""
+      year: ""
     }
   };
 
@@ -32,8 +31,7 @@ export default class NewGameForm extends Component {
       name: this.state.newGame.name,
       category: this.state.newGame.category,
       image: this.state.newGame.image,
-      year: this.state.newGame.year,
-      descriprion: this.state.newGame
+      year: this.state.newGame.year
     };
     const userId = this.props.match.params.userId;
     axios.post(`/api/users/${userId}/videogames`, payload).then(res => {
@@ -59,7 +57,6 @@ export default class NewGameForm extends Component {
           <div>
             <label htmlFor="image">Image:</label>
             <input
-          
               onChange={this.handleChange}
               value={this.state.newGame.image}
               type="text"
@@ -75,22 +72,14 @@ export default class NewGameForm extends Component {
               name="category"
             />
             <label htmlFor="year">Year Released:</label>
-            <input onChange={this.handleChange} value={this.state.newGame.year} type="text"
-              name="year"/>
-
-          </div>
-           <div>
-            <label htmlFor="description">Description:</label>
             <input
               onChange={this.handleChange}
-              value={this.state.newGame.description}
+              value={this.state.newGame.year}
               type="text"
-              name="description"
+              name="year"
             />
           </div>
-        
-
-          <Button className='#7c4dff deep-purple accent-2' type="submit">Create New Library</Button>
+          <Button className='#7c4dff deep-purple accent-2' type="submit">Create New Libabry</Button>
         </form>
           </FormStyle>
       </div>
