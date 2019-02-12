@@ -1,47 +1,53 @@
-import React, { Component } from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import NavBar from './components/NavBar'
-import UserPage from './components/UserPage'
-import HomePage from './components/HomePage'
-import Login from './components/Login'
-import Category from './components/Category'
-
-
-import { createGlobalStyle } from 'styled-components'
-
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import HomePage from "./components/HomePage";
+import UserPage from "./components/UserPage";
+import VideoGameList from "./components/videoGameList";
+import SingleUser from "./components/SingleUser";
+import SingleGame from "./components/SingleGame";
+import { createGlobalStyle } from "styled-components";
 
 const Global = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Amatic SC', cursive;
-    background: white;
-  }
-`
+body{
+margin: 0;
+padding: 0;
+
+}
+`;
+
 class App extends Component {
   render() {
     return (
-     
-      <Router>
-        <div>
-          <Global />
-          <NavBar />
-          <Switch>
-          <Route exact path= "/login" component ={Login}/>
-          <Route exact path= "/users"  component ={UserPage}/>
-          <Route exact path= "/users/:userId/categories" component ={Category}/>
-        
-          <Route path= "/" component ={HomePage}/>
-          </Switch>
-        </div>
-      </Router>
-      
-
-  );
+      <div className="App">
+        <Router>
+          <div>
+            <Global />
+            <NavBar />
+            <Switch>
+              <Route exact path="/users" component={UserPage} />
+              <Route
+                exact
+                path="/users/:userId/videogames"
+                component={VideoGameList}
+              />
+              <Route exact path="/users/:userId" component={SingleUser} />
+              <Route
+                exact
+                path="/users/:userId/videogames/:videoGamesId"
+                component={SingleGame}
+              />
+              <Route path="/" component={HomePage} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
-}
-
 
 export default App;
+
+
+
+

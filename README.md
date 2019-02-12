@@ -7,7 +7,7 @@ A MERN stact
 
 # Trello 
 - https://trello.com/b/Lmxf9Vef/project-3
-#heroku 
+# heroku 
 https://sheltered-sierra-26653.herokuapp.com/
 #Technologies Used
 - React
