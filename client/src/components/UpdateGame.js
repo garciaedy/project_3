@@ -59,7 +59,7 @@ export default class UpdateGame extends Component {
             />
           </div>
           <div>
-            <label htmlFor="category">category</label>
+            <label htmlFor="category">Category</label>
             <input
               onChange={this.handleChange}
               value={this.state.games.category}

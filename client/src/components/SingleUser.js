@@ -35,7 +35,7 @@ export default class SingleUser extends Component {
     return (
       <div>
         <PageStyle>
-          <h1>Welcome to {this.state.user.name}'s profile page</h1>
+          <h1>Welcome User {this.state.user.name}'</h1>
           <img src={this.state.user.image} alt="profile pic" />
           <h3>
             Library Type: <br />

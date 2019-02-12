@@ -67,7 +67,7 @@ export default class VideoGameList extends Component {
                 className="#ef5350 red lighten-1"
                 onClick={() => this.handleDelete(game._id)}
               >
-                Delete this game
+                Delete this Library
               </Button>
             ]}
           />
@@ -77,7 +77,7 @@ export default class VideoGameList extends Component {
 
     return (
       <div>
-        <h1>My Video Game List </h1>
+        <h1>My Libabry List </h1>
         <br />
         <CardsStyling>{gameDetails}</CardsStyling>
       </div>
