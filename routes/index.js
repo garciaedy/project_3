@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const userController = require('../controllers/userController')
-const categoryController = require('../controllers/categoryController')
+const userController = require('../controllers/user')
+const videoGamesController = require("../controllers/videoGame");
 
 router.get('/api/users', userController.index)
 router.post('/api/users/', userController.create)
