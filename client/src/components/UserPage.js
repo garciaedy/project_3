@@ -7,7 +7,7 @@ import { Button } from "react-materialize";
 
 const PageStyle = styled.div`
   font-family: "Merriweather", serif;
-  color: white;
+  color: blue;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -57,9 +57,10 @@ export default class UserPage extends Component {
 
   render() {
     return (
+     
       <PageStyle>
-        <h1> welcome to User's Forum </h1>
-        <h3>All Users:</h3>
+      <h1> Welcome to User's Forum </h1>
+      <h3>Fellow Users:</h3>
         <ButtonStyle>
           {this.state.users.map(user => (
             <IndButton key={user._id}>
