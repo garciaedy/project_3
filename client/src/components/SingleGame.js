@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import UpdateGame from "./UpdateGame";
-import { Button } from "react-materialize";
+
 
 const PageStyle = styled.div`
   font-family: "EB Garamond", serif;

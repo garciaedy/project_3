@@ -4,7 +4,7 @@ import axios from "axios";
 import NewGameForm from "./NewGameForm";
 import UpdateUser from "./UpdateUser";
 import styled from "styled-components";
-import {Button} from 'react-materialize'
+
 
 const PageStyle = styled.div`
   font-family: "Cabin", sans-serif;

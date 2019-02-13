@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import {Button, Icon} from 'react-materialize'
+import {Button,} from 'react-materialize'
 
 
 export default class NewUserForm extends Component {

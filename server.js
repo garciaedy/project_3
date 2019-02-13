@@ -6,7 +6,8 @@ const routes = require('./routes/index')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-pp.use(express.static(__dirname + "/client/build/"));
+
+app.use(express.static(__dirname + "/client/build/"));
 
 app.use("/", routes);
 

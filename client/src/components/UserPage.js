@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import NewUserForm from "./NewUserForm";
 import styled from "styled-components";
-import { Button, Icon } from "react-materialize";
+import { Button } from "react-materialize";
 
 const PageStyle = styled.div`
   font-family: "Merriweather", serif;
