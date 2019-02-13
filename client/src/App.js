@@ -7,6 +7,7 @@ import VideoGameList from "./components/videoGameList";
 import SingleUser from "./components/SingleUser";
 import SingleGame from "./components/SingleGame";
 import { createGlobalStyle } from "styled-components";
+import NewUserForm from "./components/NewUserForm";
 
 const Global = createGlobalStyle`
 body{
@@ -32,6 +33,7 @@ class App extends Component {
                 component={VideoGameList}
               />
               <Route exact path="/users/:userId" component={SingleUser} />
+              <Route exact path="/signup" component={NewUserForm} />
               <Route
                 exact
                 path="/users/:userId/videogames/:videoGamesId"

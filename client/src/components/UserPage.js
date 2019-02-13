@@ -84,7 +84,7 @@ export default class UserPage extends Component {
           ))}
         </ButtonStyle>
         <br /> <hr />
-        <NewUserForm {...this.props} />
+        
       </PageStyle>
     );
   }

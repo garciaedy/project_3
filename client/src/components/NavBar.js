@@ -31,7 +31,7 @@ class NavBar extends Component {
             <NavBarStyles id="nav-container" class="some-class">
                 <Link to="/">Home</Link>
                 <div className="right">
-                    <Link to="/login">Sign Up</Link>
+                    <Link to="/signup">Sign Up</Link>
 
                     <Link to="/users">Users</Link>
                 </div>
